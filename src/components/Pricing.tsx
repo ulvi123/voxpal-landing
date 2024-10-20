@@ -11,39 +11,99 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Simple, Transparent Pricing</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+        {/* Updated the className here */}
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
+          {/* Pricing Card 1 */}
+          <div className="flex-1 bg-gray-50 p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-4">Basic Plan</h3>
-            <p className="text-4xl font-bold mb-6">$9.99<span className="text-lg font-normal">/month</span></p>
+            <p className="text-4xl font-bold mb-6">
+              $13.99<span className="text-lg font-normal">/month</span>
+            </p>
             <ul className="mb-8">
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> 100 minutes of translation</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> 20 languages supported</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Basic customer support</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Mobile app access</li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Up to 60 minutes of session time
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> AI tutor 24x7
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Speech and sentiment analysis
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Native speaker performance review
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Weekly reporting
+              </li>
             </ul>
-            <button 
+            <button
               onClick={() => handleSubscribe('basic')}
               className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
             >
               Start Basic
             </button>
           </div>
-          <div className="bg-blue-50 p-8 rounded-lg shadow-md border-2 border-blue-600">
+
+          {/* Pricing Card 2 */}
+          <div className="flex-1 bg-blue-50 p-8 rounded-lg shadow-md border-2 border-blue-600">
             <h3 className="text-2xl font-semibold mb-4">Pro Plan</h3>
-            <p className="text-4xl font-bold mb-6">$24.99<span className="text-lg font-normal">/month</span></p>
+            <p className="text-4xl font-bold mb-6">
+              $49.99<span className="text-lg font-normal">/month</span>
+            </p>
             <ul className="mb-8">
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Unlimited translation minutes</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> All 100+ languages supported</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Priority customer support</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Advanced AI features</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Offline mode</li>
-              <li className="flex items-center mb-2"><Check className="text-green-500 mr-2" size={20} /> Multi-device sync</li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Everything in basic plan
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Admin dashboard integration
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Priority customer support
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> On-demand native speaker review
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> 120+ minutes of session time
+              </li>
             </ul>
-            <button 
+            <button
               onClick={() => handleSubscribe('pro')}
               className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
             >
               Go Pro
+            </button>
+          </div>
+
+          {/* Pricing Card 3 */}
+          <div className="flex-1 bg-blue-50 p-8 rounded-lg shadow-md border-1 border-blue-600">
+            <h3 className="text-2xl font-semibold mb-4">Enterprise Plan</h3>
+            <p className="text-4xl font-bold mb-6">
+              {/* $49.99<span className="text-lg font-normal">/month</span> */}
+              <h2>Talk to us!</h2>
+            </p>
+            <ul className="mb-8">
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Everything in Pro plan
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Customized solutions
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Dedicated account manager
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Unlimited session time
+              </li>
+              <li className="flex items-center mb-2">
+                <Check className="text-green-500 mr-2" size={20} /> Advanced analytics
+              </li>
+            </ul>
+            <button
+              onClick={() => handleSubscribe('enterprise')}
+              className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+            >
+              Enterprise
             </button>
           </div>
         </div>
